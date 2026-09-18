@@ -1,0 +1,5 @@
+kernelType: python_kubernetes
+executeParam:
+  image:
+    imageUrl: >-
+      emr-serverless-online-cn-beijing.cr.volces.com/emr-serverless-spark/spark:3.5.1-py3.12-ubuntu20.04-802
