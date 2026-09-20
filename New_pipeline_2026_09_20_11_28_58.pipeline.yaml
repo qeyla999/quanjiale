@@ -1,0 +1,34 @@
+apiVersion: newide.studio.dataleap.volc/v1
+kind: Pipeline
+metadata:
+  name: New_pipeline_2026_09_20_11_28_58
+spec:
+  displayName: New_pipeline_2026_09_20_11_28_58
+  description: ''
+  runAs: User/83306922
+  trigger:
+    type: SCHEDULED
+    pauseStatus: UNPAUSED
+    frequency: daily
+    cronExpression: 45 00 * * *
+    priority: d5
+  activities:
+    - name: notebook_1
+      type: notebook
+      source: WORKSPACE
+      path: /Workspace/User/liheng.uszl-83306922/test.ipynb
+      kernelType: python_kubernetes
+      engineQueue: ''
+      computingResourceGroupName: dmp_compute
+      sparkConf: []
+      executeParam:
+        image:
+          imageUrl: >-
+            emr-serverless-online-cn-beijing.cr.volces.com/emr-serverless-engine/spark:3.5.1-py3.12-ubuntu20.04-861
+        cpuCores: 1
+        memoryMb: 4096
+      parameters: []
+      resources: []
+      computingResourceGroupId: 1513
+  schedulingResourceGroupName: dmp_schedule
+  schedulingResourceGroupId: 1514
