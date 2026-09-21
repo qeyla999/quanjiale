@@ -1,0 +1,30 @@
+apiVersion: newide.studio.dataleap.volc/v1
+kind: Pipeline
+metadata:
+  name: New_pipeline_2026_09_21_15_14_22
+spec:
+  displayName: "New_pipeline_2026_09_21_15_14_22"
+  description: ""
+  runAs: "User/83306922"
+  trigger:
+    type: SCHEDULED
+    pauseStatus: UNPAUSED
+    frequency: daily
+    cronExpression: 10 00 * * *
+    priority: d5
+  activities: 
+    - name: notebook_1
+      type: notebook
+      source: WORKSPACE
+      path: ''
+      kernelType: ''
+      engineQueue: ''
+      computingResourceGroupName: ''
+      sparkConf: []
+      executeParam:
+        image:
+          imageUrl: ''
+        cpuCores: 1
+        memoryMb: 4096
+      parameters: []
+      resources: []
