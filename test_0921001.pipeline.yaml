@@ -13,7 +13,7 @@ spec:
     cronExpression: 46 00 * * *
     priority: d5
   activities:
-    - name: notebook_1
+    - name: test_notebook_1
       type: notebook
       source: WORKSPACE
       path: /Workspace/User/liheng.uszl-83306922/B_test.ipynb
